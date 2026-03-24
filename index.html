@@ -31,25 +31,25 @@
                 const computerChoice = getComputerChoice();
 
                 if (humanChoice === computerChoice) {
-                    return "Tie"
+                    return `Tie! \nYour score: ${humanScore} \nComputer score: ${computerScore}`
                 } else if (humanChoice === "rock" && computerChoice === "paper") {
-                    computerScore++;
-                    return "You lose! Paper beats rock";
+                    ++computerScore
+                    return `You lose! Paper beats rock \nYour score: ${humanScore} \nComputer score: ${computerScore}`;
                 } else if (humanChoice === "rock" && computerChoice === "scissors") {
-                    humanScore++;
-                    return "You win! Rock beats scissors";
+                    ++humanScore;
+                    return `You win! Rock beats scissors \nYour score: ${humanScore} \nComputer score: ${computerScore}`;
                 } else if (humanChoice === "paper" && computerChoice === "rock") {
-                    humanScore++;
-                    return "You win! Paper beats rock";
+                    ++humanScore;
+                    return `You win! Paper beats rock \nYour score: ${humanScore} \nComputer score: ${computerScore}`;
                 } else if (humanChoice === "paper" && computerChoice === "scissors") {
-                    computerScore++;
-                    return "You lose! Scissors beats paper";
+                    ++computerScore;
+                    return `You lose! Scissors beats paper \nYour score: ${humanScore} \nComputer score: ${computerScore}`;
                 } else if (humanChoice === "scissors" && computerChoice === "paper") {
-                    humanScore++;
-                    return "You win! Scissors beats paper";
+                    ++humanScore;
+                    return `You win! Scissors beats paper \nYour score: ${humanScore} \nComputer score: ${computerScore}`;
                 } else if (humanChoice === "scissors" && computerChoice === "rock") {
-                    computerScore++;
-                    return "You lose! Rock beats scissors";
+                    ++computerScore;
+                    return `You lose! Rock beats scissors \nYour score: ${humanScore} \nComputer score: ${computerScore}`;
                 }
             }
             console.log(playRound());
